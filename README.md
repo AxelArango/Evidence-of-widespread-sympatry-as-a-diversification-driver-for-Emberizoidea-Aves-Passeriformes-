@@ -21,7 +21,7 @@ Scripts: This folder contains the annotated scripts necessary to perform the ana
 phyloregion: This folder contains the phylogenetic distance matrix for Emberizoidea to save time; calculated in mastrescript_phyloregion and loaded when runslow is set to F. Otherwise serves as a container for all the phyloregion results.
 	- phylobeta.Rdata: Simpson's phylogenetic index distance matrix.
 
-biogeobears: This folder contains the biogeographic models performed by BioGeoBEARS, using the phylogenetic regions calculated using K8, also serves as a container for all the BioGeoBEARS results.
+biogeobears: This folder contains a .txt to the biogeographic models performed by BioGeoBEARS, using the phylogenetic regions calculated using K8, and in the scritp also serves as a container for all the BioGeoBEARS results.
 	- Allrange_DEC_k8_unconstrained_v2.Rdata: DEC model using 8 distinct regions for Emberizoidea
 	- all range_DEC+J_k8_unconstrained_v2.Rdata: DEC model considering jump dispersal
 	- All range_DIVALIKE_k8_unconstrained_v2.Rdata: DIVA model using 8 distance regions for Emberizoidea
@@ -29,10 +29,10 @@ biogeobears: This folder contains the biogeographic models performed by BioGeoBE
 	- All range_BAYAREALIKE_k8_unconstrained_v2.Rdata: BayArea model using 8 distance regions for Emberizoidea, used for the rest of the analyses.
 	- All range_BAYAREALIKE+J_k8_unconstrained_v1.Rdata: BayArea model considering jump dispersal
 
-bsm: This folder contains a single object with the basic inputs for the calculation of the stochastic biogeographic mapping (SBM), using the BayArea model and can be used to contain the SBM results. The inputs object can be created with the masterscript_biogeobears-rates.R script.
+bsm: This folder contains a .txt with the link to a single object with the basic inputs for the calculation of the stochastic biogeographic mapping (SBM), using the BayArea model and can be used to contain the SBM results. The inputs object can be created with the masterscript_biogeobears-rates.R script.
 	- BSM_inputs_file.Rdata: Inputs necessary to run the SBMs, calculated for the BayArea model
 
-Diversification: This folder contains the posterior distributions of the speciation rate calculations, and the missing species for each family in the Barkers et al. (2015) phylogeny according to the Clemens Taxonomy.
+Diversification: This folder contains a .txt with the link to the posterior distributions of the speciation rate calculations, and the missing species for each family in the Barkers et al. (2015) phylogeny according to the Clemens Taxonomy.
 	- BAMM: data used for the BAMM calculations
 		- BAMM_chain_swap.txt: frequency of hot/cold chain swapping and chain convergence
 		- BAMM_event_emberizo_1.txt: Posterior distributions of all parameters associated with the macroevolutionary rate regimes
