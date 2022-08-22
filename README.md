@@ -3,7 +3,8 @@ This repository contains the necessary tools and data to allow the recreation of
 
 
 File description:
-Data: This folder contains the core files used for this study
+Data: This folder contains the core files used for this study:
+
 	- BAMM-MMC_taxonomy.csv: Clements et al., (2019) taxonomic classification for all the species used in this study
 	- breeding_phylip_k8.txt: presence and absence file in PHYLIP format, obtained using the phyloregion method, used for the ancestral area reconstruction of the Emberizoidea superfamily.
 	- Breeding-phylogeny_MCC.tre: Barker et al., (2015) Maximum clade credibility phylogeny.
@@ -14,14 +15,17 @@ Data: This folder contains the core files used for this study
 	- pglsread_rage: Data Frame with the data per family used for the PGLSs, including mean speciation rate (BAMM), Local Extinction rate (eTR; extinction_rate), Dispersal rate (dTR; dispersal_rate), family age (age), total richness per family (total_richness).
 
 Scripts: This folder contains the annotated scripts necessary to perform the analyses used in this study.
+
 	- masterscript_phyloregion.R: This script contains the code required to calculate the phylogenetic regions for Emberizoidea using the phyloregion package for R.
 	- masterscript_biogeobears-rates.R: This script contains the code required to reconstruct the ancestral area models, calculate the Stochastic Biogeographic Mappings (BSM), identify diversification shifts and calculate the Transition and Speciation rates (Including lambdaBAMM, DR, ClaDS and Method of Moments) used in this study.
 	- masterscript_pgls.R: This script contains the instructions to perform the PGLSs in this study.
 
 phyloregion: This folder contains the phylogenetic distance matrix for Emberizoidea to save time; calculated in mastrescript_phyloregion and loaded when runslow is set to F. Otherwise serves as a container for all the phyloregion results.
+
 	- phylobeta.Rdata: Simpson's phylogenetic index distance matrix.
 
 biogeobears: This folder contains a .txt to the biogeographic models performed by BioGeoBEARS, using the phylogenetic regions calculated using K8, and in the scritp also serves as a container for all the BioGeoBEARS results.
+
 	- Allrange_DEC_k8_unconstrained_v2.Rdata: DEC model using 8 distinct regions for Emberizoidea
 	- all range_DEC+J_k8_unconstrained_v2.Rdata: DEC model considering jump dispersal
 	- All range_DIVALIKE_k8_unconstrained_v2.Rdata: DIVA model using 8 distance regions for Emberizoidea
@@ -30,10 +34,12 @@ biogeobears: This folder contains a .txt to the biogeographic models performed b
 	- All range_BAYAREALIKE+J_k8_unconstrained_v1.Rdata: BayArea model considering jump dispersal
 
 bsm: This folder contains a .txt with the link to a single object with the basic inputs for the calculation of the stochastic biogeographic mapping (SBM), using the BayArea model and can be used to contain the SBM results. The inputs object can be created with the masterscript_biogeobears-rates.R script.
+
 	- BSM_inputs_file.Rdata: Inputs necessary to run the SBMs, calculated for the BayArea model
 
 Diversification: This folder contains a .txt with the link to the posterior distributions of the speciation rate calculations, and the missing species for each family in the Barkers et al. (2015) phylogeny according to the Clemens Taxonomy.
-	- BAMM: data used for the BAMM calculations
+	
+        - BAMM: data used for the BAMM calculations
 		- BAMM_chain_swap.txt: frequency of hot/cold chain swapping and chain convergence
 		- BAMM_event_emberizo_1.txt: Posterior distributions of all parameters associated with the macroevolutionary rate regimes
 		- BAMM_mcmc_emberizo_1.txt: file containing basic attributes of the MCMC chain 
